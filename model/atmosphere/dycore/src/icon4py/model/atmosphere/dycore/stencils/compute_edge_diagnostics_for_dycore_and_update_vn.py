@@ -9,7 +9,6 @@
 
 import gt4py.next as gtx
 from gt4py.eve import utils as eve_utils
-from gt4py.next import broadcast
 from gt4py.next.experimental import concat_where
 
 from icon4py.model.atmosphere.dycore.stencils.add_analysis_increments_to_vn import (
@@ -201,8 +200,8 @@ def _compute_theta_rho_face_values_and_pressure_gradient_and_update_vn(
             geofac_grg_y=geofac_grg_y,
         ),
         (
-            broadcast(wpfloat("0.0"), (dims.EdgeDim, dims.KDim)),
-            broadcast(wpfloat("0.0"), (dims.EdgeDim, dims.KDim)),
+            wpfloat("0.0"),  # broadcast(wpfloat("0.0"), (dims.EdgeDim, dims.KDim)),
+            # wpfloat("0.0"), #broadcast(wpfloat("0.0"), (dims.EdgeDim, dims.KDim)),
         ),
     )
 

@@ -582,8 +582,8 @@ class TestComputeThetaRhoPressureGradientAndUpdateVnContinuousBenchmarking(
         base_data["nflat_gradp"] = 35
 
         # For some reason to get compatibility with the benchmark on Säntis.
-        base_data["nflatlev"] = 5
-        base_data["nflat_gradp"] = 34
+        # base_data["nflatlev"] = 5
+        # base_data["nflat_gradp"] = 34
         base_data["start_edge_lateral_boundary"] = (
             0  # grid.end_index(edge_domain(h_grid.Zone.LATERAL_BOUNDARY))
         )
